@@ -1,0 +1,273 @@
+.album-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #181818;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.album-main-content {
+  flex: 1;
+  padding: 28px 32px;
+  padding-bottom: 110px;
+}
+
+.album-hero-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.album-cover-img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.album-hero-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+  margin: 0 0 8px;
+}
+
+.album-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.album-artist {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.album-tracks-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.album-track-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.album-track-row-active {
+  background-color: #2f2f2f;
+  border-left: 3px solid #1db954;
+}
+
+.album-track-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.album-play-btn {
+  background-color: #1db954;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.album-track-text {
+  min-width: 0;
+}
+
+.album-track-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.album-track-artist {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.album-track-duration {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.album-audio-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #121212;
+  border-top: 1px solid #282828;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 10;
+}
+
+.album-now-playing {
+  min-width: 0;
+}
+
+.album-audio-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.album-audio-artist {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.album-audio-element {
+  max-width: 420px;
+  width: 100%;
+  height: 36px;
+}
+
+.album-audio-unavailable {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.album-status-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  text-align: center;
+}
+
+.album-failure-img {
+  width: 180px;
+  max-width: 100%;
+  margin-bottom: 12px;
+}
+
+.album-status-text {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+.album-retry-btn {
+  background-color: #1db954;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .album-page-layout {
+    flex-direction: column;
+  }
+
+  .album-main-content {
+    padding: 20px 16px;
+    padding-bottom: 130px;
+  }
+
+  .album-hero-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album-cover-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .album-audio-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .album-audio-element {
+    max-width: 100%;
+  }
+}
+.album-back-btn {
+  background-color: #242424;
+  color: #ffffff;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.album-tracks-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #282828;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.album-track-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 12px;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .album-tracks-header,
+  .album-track-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
